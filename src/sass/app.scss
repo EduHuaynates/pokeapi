@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.optionsContainer {
+  display: flex;
+  //   flex-direction: column;
+  flex-wrap: wrap;
+  padding: 15px;
+  max-width: 70%;
+  align-content: center;
+  margin: auto;
+}
+
+.labelContainer {
+  margin: 5px;
+  display: flex;
+  min-width: 40%;
+  flex-grow: 1;
+}
+
+.item {
+  flex-grow: 1;
+  margin-left: 5px;
+}
+
+p {
+  padding: 5px;
+  max-width: 100px;
+}
+
+.tableContainer {
+  margin: auto;
+  border: 1px solid #b3b3b3;
+  border-radius: 4px;
+  max-width: 70%;
+  //   padding: 15px;
+  //   display: flex;
+  //   justify-content: center;
+}
+
+
+@import "./variables";
