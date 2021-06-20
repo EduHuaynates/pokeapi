@@ -1,15 +1,31 @@
+@import "./variables";
+@import "./mixin.scss";
+@import "./components/navbar";
+@import "./components/sidebar";
+@import "./components/main";
+@import "./components/buttons";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+input {
+  padding: 5px;
+  // margin: 5px;
 }
 
 .optionsContainer {
   display: flex;
-  //   flex-direction: column;
   flex-wrap: wrap;
   padding: 15px;
-  max-width: 70%;
+  max-width: 90%;
   align-content: center;
   margin: auto;
 }
@@ -18,28 +34,56 @@
   margin: 5px;
   display: flex;
   min-width: 40%;
-  flex-grow: 1;
+  max-width: 100%;
+
+  &:nth-child(6){
+    justify-content: flex-end;
+  }
+  // flex-grow: 1;
 }
 
 .item {
   flex-grow: 1;
+  max-width: 100%;
   margin-left: 5px;
 }
 
 p {
   padding: 5px;
+  align-self: center;
   max-width: 100px;
 }
 
 .tableContainer {
   margin: auto;
   border: 1px solid #b3b3b3;
-  border-radius: 4px;
-  max-width: 70%;
-  //   padding: 15px;
-  //   display: flex;
-  //   justify-content: center;
+  border-radius: $border-radius;
+  max-width: 90%;
 }
 
+.logo {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-left: 15px;
+}
 
-@import "./variables";
+main {
+  display: flex;
+  width: $width_page;
+  margin: auto;
+}
+
+.calendar_container {
+  position: relative;
+}
+
+.btn_calendar {
+  padding: 10px;
+}
+
+.calendar {
+  position: absolute;
+  top: 50px;
+  z-index: 20;
+}

@@ -1,0 +1,26 @@
+.navbar_container {
+  display: flex;
+  //   justify-content: flex-end;
+  justify-content: space-between;
+  align-content: center;
+  border-bottom: 1px solid $color_grey;
+  width: $width_page;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+}
+
+.navOptions {
+  @include listoptions;
+  color: $color_grey;
+  border-bottom: 2px solid transparent;
+  // transition: color 0.5s, border-bottom 0.5s;
+}
+
+.navOptions:hover {
+  color: $color_azul;
+  border-bottom: 2px solid $color_azul;
+  transition: color 0.5s, border-bottom 0.5s;
+}

@@ -2,6 +2,8 @@
 // All API calls are gathered here -- By Pokemon and Type
 //=============================================================================
 
+const URL_POKEMON = "https://pokeapi.co/api/v2/";
+
 //Call an individual pokemon
 export async function fetchPokemon(url) {
   try {
@@ -60,4 +62,18 @@ export async function getAllPokemon(data) {
   return _pokemonData;
 }
 
-
+export async function fetchData(typeurl) {
+  try {
+    const resp = await fetch(`${URL_POKEMON}${typeurl}`);
+    const data = await resp.json();
+    if (typeurl == "pokemon") {
+      const allPoke = await getAllPokemon(data.results);
+      return allPoke;
+    } else if (typeurl == "type") {
+      const allType = await getAllTypes(data.results);
+      return allType;
+    }
+  } catch (err) {
+    console.error(err);
+  }
+}
